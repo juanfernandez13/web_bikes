@@ -1,0 +1,118 @@
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.menu-button {
+    all: unset;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+}
+
+.menu-base {
+    height: 100vh;
+    width: 0;
+    background-color: var(--my-red);
+    transition: width 800ms ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+    min-height: 600px;
+    padding-top: 12vh;
+    z-index: 10;
+}
+
+.overlay {
+    height: 100vh;
+    width: 0;
+    background-color: rgba(36, 36, 36, 0.30);
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: width 800ms ease-in-out;
+    min-height: 600px;
+    z-index: 10;
+}
+
+.menu-option {
+    width: 60%;
+    min-width: 140px;
+}
+
+.menu-option svg {
+    width: 30px;
+    margin-left: 8px;
+    position: static;
+}
+
+.submenu {
+    height: 100vh;
+    width: 50vw;
+    background-color: var(--my-light);
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    z-index: 100;
+    transition: left 800ms ease-in-out;
+    color: #242424;
+
+}
+
+.submenu-button svg {
+    height: 30px;
+}
+
+.row-submenu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 12px 0;
+    width: 100%;
+}
+
+.divider {
+    width: 100%;
+    border-top: 1px solid rgba(36, 36, 36, 0.3);
+    margin: 20px 0;
+}
+
+.red {
+    background-color: #c11f25;
+    color: #f8f9fa;
+    width: 60%;
+}
+
+.column-submenu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .menu-button,
+    .menu-base,
+    .overlay {
+        display: none;
+    }
+    
+    .logo {
+        width: auto;
+        justify-content: start;
+        margin-right: 10vw;
+      }
+}

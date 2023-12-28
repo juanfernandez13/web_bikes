@@ -1,0 +1,55 @@
+.div-showcase{
+    height: 60vh;
+    width: 100%;
+    background-color: var(--my-light);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    justify-content: space-around;
+}
+
+.right-button-showcase, .left-button-showcase {
+    background-color: var(--my-gray);
+    padding: 16px;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 0 12px;
+}
+.right-button-showcase:hover, .left-button-showcase:hover {
+    transform: translateY(-12px);
+}
+.hidden-showcase{
+    height: 75%;
+    width: 90%;
+    overflow: hidden;
+}
+
+.showcase {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: transform 0.2s ease-in-out;
+}
+
+.showcase-element{
+    height: 100%;
+    width: 20%;
+    background-color: red;
+    flex-shrink: 0;
+    margin: 0 2.5%;
+}
+
+@media (max-width: 768px) {
+    .right-button-showcase, .left-button-showcase{
+        display: none;
+    }
+    .hidden-showcase{
+        width: 100%;
+        overflow: auto;
+    }
+
+    .showcase-element{
+        width: 85%;
+    }
+}

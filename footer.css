@@ -1,0 +1,26 @@
+.footer {
+    height: 20vh;
+    background-color: var(--my-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row-icons{
+    height: 4vh;
+    width: 20vw;
+    color: var(--my-light);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.row-icons i{
+    transition: color 0.2s ease-in-out;
+}
+
+.row-icons i:hover {
+    cursor: pointer;
+    color: var(--my-red);
+}
